@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="goudan">狗蛋1</div>
+			<div class="goudan">狗蛋2</div>
+			<div class="goudan">狗蛋3</div>
+			<p class="goudan">狗蛋4</p>
+		</div>
+		<p>狗蛋5</p>
+
+		<script type="text/javascript">
+			
+			/*
+				类数组
+
+				.getElementsByClassName();
+					不兼容IE8及以下
+
+				.getElementsByTagName();
+					兼容所有浏览器
+			*/
+			
+
+			var obj = document.getElementsByClassName('goudan');
+			//obj.innerHTML = '狗蛋';
+			obj[1].style.color = 'red';
+			alert(  obj.length  );
+			
+			var obj = document.getElementsByTagName('p');
+			obj[0].style.color = 'red';
+
+			var oWrap = document.getElementById('wrap');
+			var obj = oWrap.getElementsByTagName('p');
+			obj[0].style.color = 'red';
+
+		</script>
+	</body>
+</html>

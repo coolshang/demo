@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			
+			#banner{
+				width:600px;
+				height:347px;
+				margin:50px auto;
+				position:relative;
+			}
+
+			#pic img{
+				width:100%;
+				position:absolute;
+				top:0;
+				left:0;
+				display:none;
+			}
+			#pic img.on{
+				display:block;
+			}
+			#tab{
+				position:absolute;
+				bottom:10px;
+				left:50%;
+				width:92px;
+				margin-left:-45px;
+			}
+			#tab li{
+				width:12px;
+				height:12px;
+				background:rgba(255,255,255,.7);
+				border-radius:100%;
+				float:left;
+				margin:0 3px;
+				cursor:pointer;
+			}
+			#tab li.on{
+				background:#f60;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="banner">
+			<div id="pic">
+				<img class='on' src="images/1.jpg" alt="" />
+				<img src="images/2.jpg" alt="" />
+				<img src="images/3.jpg" alt="" />
+				<img src="images/4.jpg" alt="" />
+				<img src="images/5.jpg" alt="" />
+			</div>
+
+
+			<div id="tab">
+				<ul>
+					<li class='on'></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			
+			var aLi = document.querySelectorAll('#tab ul li');
+			
+			var length = aLi.length;
+
+			var index = 0;
+
+			for (var i=0;i<length;i++ )
+			{
+				aLi[i].goudan = i; //自定义属性用来存序号
+				aLi[i].onclick = function(){
+					//alert( index );
+
+					aLi[index].className = ''; //清除上一个的名字
+					this.className = 'on';
+					index = this.goudan;
+
+					//alert( index );
+				};
+			};
+
+			/*
+			aLi[0].goudan = 0; //自定义属性用来存序号
+			aLi[0].onclick = function(){
+				aLi[index].className = '';
+				index = this.goudan;
+				this.className = 'on';
+			};
+
+			aLi[1].goudan = 1; //自定义属性用来存序号
+			aLi[1].onclick = function(){
+				aLi[index].className = '';
+				index = this.goudan;
+				this.className = 'on';
+			};
+
+			aLi[2].goudan = 2; //自定义属性用来存序号
+			aLi[2].onclick = function(){
+				aLi[index].className = '';
+				index = this.goudan;
+				this.className = 'on';
+			};
+
+			aLi[3].goudan = 3; //自定义属性用来存序号
+			aLi[3].onclick = function(){
+				aLi[index].className = '';
+				index = this.goudan;
+				this.className = 'on';
+			};
+
+			aLi[4].goudan = 4; //自定义属性用来存序号
+			aLi[4].onclick = function(){
+				aLi[index].className = '';
+				index = this.goudan;
+				this.className = 'on';
+			};
+			*/
+
+
+		</script>
+	</body>
+</html>

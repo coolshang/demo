@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>作业-九九乘法表</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			ul{
+				overflow:hidden;
+			}
+			ul li{
+				width:65px;
+				height:35px;
+				font-size:12px;
+				line-height:35px;
+				text-align:center;
+				border:1px solid blue;
+				float:left;
+				margin:2px;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1"></div> <hr />
+		<div class="box2"></div> <hr />
+		<div class="box3"></div> <hr />
+		<div class="box4"></div>
+
+		<script type="text/javascript">
+			
+			var oBox1 = document.querySelector('.box1');
+			var oBox2 = document.querySelector('.box2');
+			var oBox3 = document.querySelector('.box3');
+			var oBox4 = document.querySelector('.box4');
+			/*
+			for (var i=1;i<=9;i++ )
+			{
+				oBox1.innerHTML += '<ul>';
+				for (var j=1;j<=i;j++ )
+				{
+					oBox1.innerHTML += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				oBox1.innerHTML += '</ul>';
+			};*/
+			
+			
+			for (var i=1;i<10;i++ )
+			{
+				var str = '<ul>';
+				for (var j=1;j<=i;j++ )
+				{
+					str += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				str += '</ul>';
+
+				oBox1.innerHTML += str;
+			};
+
+			for (var i=1;i<10;i++ )
+			{
+				var str = '<ul>';
+				for (var j=i;j<=9;j++ )
+				{
+					str += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				str += '</ul>';
+
+				oBox2.innerHTML += str;
+			};
+
+			for (var i=9;i>0;i-- )
+			{
+				var str = '<ul>';
+				for (var j=1;j<=i;j++ )
+				{
+					str += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				str += '</ul>';
+
+				oBox3.innerHTML += str;
+			};
+
+			for (var i=9;i>0;i-- )
+			{
+				var str = '<ul>';
+				for (var j=i;j<=9;j++ )
+				{
+					str += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				str += '</ul>';
+
+				oBox4.innerHTML += str;
+			};
+			
+			
+			/*
+			for (var i=0;i<9;i++ )
+			{
+				oBox1.innerHTML += '<ul></ul>';
+			};
+			
+			var aUl = oBox1.querySelectorAll('ul');
+			
+			
+			for (var i=1;i<=aUl.length;i++ )
+			{
+				var str = '';
+				for (var j=1;j<i+1;j++ )
+				{
+					str += '<li>' + i + '*' + j + '=' + i*j + '</li>';
+				};
+				aUl[i-1].innerHTML = str;
+			};
+			*/
+			
+
+			/*
+			var str = '';
+			for (var j=0;j<1;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[0].innerHTML = str;
+
+
+			var str = '';
+			for (var j=0;j<2;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[1].innerHTML = str;
+
+
+
+			var str = '';
+			for (var j=0;j<3;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[2].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<4;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[3].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<5;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[4].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<6;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[5].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<7;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[6].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<8;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[7].innerHTML = str;
+
+			var str = '';
+			for (var j=0;j<9;j++ )
+			{
+				str += '内容 ';
+			}
+			aUl[8].innerHTML = str;
+			*/
+
+
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			#wrap{
+				overflow:hidden;
+			}
+			#wrap div{
+				float:left;
+				width:100px;
+				height:100px;
+				background:pink;
+				margin:0 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<p id="goudan">goudan</p>
+		</div>
+
+		<script type="text/javascript">
+			
+			var oWrap = document.getElementById('wrap');
+			var oGoudan = document.getElementById('goudan');
+
+			oWrap.innerHTML += '123';
+			oGoudan.style.color = 'red';
+
+
+			var a = 10;
+
+			var str = 'a + "px"';
+
+			alert( str );
+
+		</script>
+	</body>
+</html>

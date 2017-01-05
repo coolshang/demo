@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			
+			#box{
+				width:200px;
+				box-shadow:0 0 5px #000;
+				margin:50px;
+			}
+			#box ul{
+				overflow:hidden;
+				border-bottom:1px solid #666;
+				height:35px;
+			}
+			#box ul li.first{
+				height:35px;
+				line-height:35px;
+				text-indent:5px;
+				background:#cc00ff;
+				color:#fff;
+				font-size:14px;
+				cursor:pointer;
+			}
+			#box ul li.other{
+				background:#fff;
+				color:#000;
+				text-indent:5px;
+				height:30px;
+				line-height:30px;
+				border-bottom:1px dotted #bbb;
+				font-size:12px;
+				cursor:pointer;
+			}
+			#box ul li.other:hover{
+				background:pink;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<ul>
+				<li class="first">同事</li>
+				<li class='other'>千寻</li>
+				<li class='other'>千凡</li>
+				<li class='other'>阿飞</li>
+				<li class='other'>追梦</li>
+			</ul>
+			<ul>
+				<li class="first">好友</li>
+				<li class='other'>Natural萌</li>
+				<li class='other'>蜗牛</li>
+				<li class='other'>云菲雪</li>
+			</ul>
+			<ul>
+				<li class="first">VIP学员</li>
+				<li class='other'>全场最僵</li>
+				<li class='other'>小五</li>
+				<li class='other'>提拉米苏</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			
+			var aUl = document.querySelectorAll('#box ul');
+			
+			
+			/*
+			for ( var i=0;i<aUl.length;i++ )
+			{
+				aUl[i].onclick = function(){
+
+					for (var j=0;j<aUl.length;j++ )
+					{
+						//aUl[j].style.height = i!=j?'35px':'auto';
+						if ( i != j )
+						{
+							aUl[j].style.height = '35px';
+						}else
+						{
+							aUl[j].style.height = 'auto';
+						};
+					};
+
+				};
+			};
+			*/
+			
+			
+
+			
+			for (var i=0;i<aUl.length;i++ )
+			{
+				aUl[i].onclick = function(){
+					for (var j=0;j<aUl.length;j++ )
+					{
+						aUl[j].style.height = '35px';
+					};
+					this.style.height = 'auto';
+				};
+			};
+			
+
+			/*
+			aUl[0].onclick = function(){
+				this.style.height = 'auto';
+			};
+
+			aUl[1].onclick = function(){
+				this.style.height = 'auto';
+			};
+
+			aUl[2].onclick = function(){
+				this.style.height = 'auto';
+			};
+			*/
+
+		</script>
+	</body>
+</html>

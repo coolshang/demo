@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			
+			#box{
+				width:600px;
+				margin:50px auto;
+			}
+			#box p{
+				font-size:14px;
+				font-weight:bold;
+				border-bottom:1px dashed #000;
+				line-height:30px;
+			}
+			#box ul{
+				margin-top:10px;
+				overflow:hidden;
+			}
+			#box ul li{
+				width:67px;
+				height:20px;
+				float:left;
+				background-image:url(images/ckbg1.jpg);
+				background-repeat:no-repeat;
+				font-size:12px;
+				line-height:20px;
+				text-indent:30px;
+				margin-right:8px;
+				cursor:pointer;
+			}
+			#box ul li.on{
+				background-image:url(images/ckbg2.jpg);
+			}
+			#box ul li.goudan{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<p>你最喜欢的水果</p>
+			<ul>
+				<li>苹果</li>
+				<li>火龙果</li>
+				<li>榴莲</li>
+				<li class='goudan'>草莓</li>
+				<li class='goudan'>车厘子</li>
+				<li>葡萄</li>
+				<li>柠檬</li>
+				<li>桂圆</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			
+			var aLi = document.querySelectorAll('#box ul li');
+
+
+			for (var i=0;i<aLi.length;i++ )
+			{
+				aLi[i].ifCheck = false; //自定义属性用来表示有没有被选中
+				aLi[i].nowClass = aLi[i].className; //自定义属性用来存储最初的className
+				aLi[i].onclick = function(){
+					this.className = this.ifCheck?this.nowClass:this.className+' on';
+					this.ifCheck = !this.ifCheck;
+				};
+			};
+
+			/*
+				if ( this.ifCheck )
+				{
+					this.className = this.nowClass;
+				}else{
+					this.className += ' on'; // 'checked on'
+				};
+			*/
+			
+			/*
+			for (var i=0;i<aLi.length;i++ )
+			{
+				aLi[i].setAttribute('ifCheck' , '');
+				aLi[i].setAttribute('nowClass' , aLi[i].className);
+				//注册事件
+				aLi[i].onclick = function(){
+					if ( this.getAttribute('ifCheck') )
+					{
+						this.className = this.getAttribute('nowClass');
+						this.setAttribute('ifCheck' , '');
+					}else{
+						this.className += ' on'; // 'checked on'
+						this.setAttribute('ifCheck' , '1');
+					}
+				};
+			};
+			*/
+			
+			/*
+			//alert( aLi[2].className )
+
+			for (var i=0;i<aLi.length;i++ )
+			{
+				aLi[i].onclick = function(){
+
+					this.className = this.className?'':'on';
+					
+					//if ( this.className == '' )
+					//{
+						//this.className = 'on';
+					//}else{
+						//this.className = '';
+					//}
+				};
+			};
+			*/
+
+		</script>
+	</body>
+</html>

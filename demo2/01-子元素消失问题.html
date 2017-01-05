@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+			
+			#p{
+				width:100px;
+				height:30px;
+				background:pink;
+			}
+			#box{
+				width:250px;
+				height:250px;
+				background:#cc00ff;
+				display:none;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div id='wrap'>
+			<p id='p'></p>
+			<div id='box'></div>
+		</div>
+
+		<script type="text/javascript">
+			
+			var oWrap = document.getElementById('wrap');
+			var oBox = document.getElementById('box');
+
+			oWrap.onmouseover = function(){
+				oBox.style.display = 'block';
+			};
+			oWrap.onmouseout = function(){
+				oBox.style.display = 'none';
+			};
+
+		</script>
+	</body>
+</html>

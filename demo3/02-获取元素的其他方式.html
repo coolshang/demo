@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州教育-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+		</style>
+	</head>
+	<body>
+		
+		<p id='test'>p1 id=test</p>
+		<p class='goudan'>p2</p>
+		<p class='goudan'>p3</p>
+		<p class='goudan'>p4</p>
+
+		<script type="text/javascript">
+			
+			/*
+				静态方法：
+
+				动态方法：
+					每当我们用到一次类数组的时候，它都会重新获取一次
+					
+			*/
+
+			var oTest = document.getElementById('test');
+			var aGou = document.getElementsByClassName('goudan');
+			
+			/*
+			oTest.style.color = 'red';
+			oTest.id = 'wanger';
+			oTest.style.color = '#cc00ff';
+			*/
+			//alert( aGou.length );
+
+			aGou[0].style.color = 'red';
+			
+			aGou[0].className = 'dachui';
+
+			alert( aGou.length );
+
+			aGou[0].style.color = '#cc00ff';
+			/**/
+
+		</script>
+	</body>
+</html>
